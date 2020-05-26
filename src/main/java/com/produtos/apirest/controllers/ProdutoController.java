@@ -50,6 +50,9 @@ public class ProdutoController {
 		produtoRepository.deleteById(id);
 	}
 	
-	
+	@PutMapping("/produto")
+	public Produto atualizaProduto(@RequestBody Produto produto) {
+		return produtoRepository.save(produto);
+	}
 	
 }
